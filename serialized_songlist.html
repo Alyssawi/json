@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Serialized Songlist</title>
+    <script>
+		function loadMessages() {
+			request = new XMLHttpRequest();
+			console.log("1: created request");
+  
+			request.open("GET", "https://alyssawi.github.io/json/songlist.json", true);
+			console.log("2: open success");
+ 	
+			request.onreadystatechange = function() {
+				console.log("3:  event fired");	
+ 
+				if (request.readyState == 4 && request.status == 200) {
+					console.log("5:  data is ready");
+					theData = request.responseText;
+
+                    // Serialized String 
+                    document.getElementById("messages").innerHTML = theData;
+
+                    // Formatting in a user-friendly way
+                    songlist = JSON.parse(theData);
+                    output = "";
+                    for (let i = 0; i < songlist.length; i++) {
+                        song = songlist[i];
+                        output += "Artist: " + song["Artist"] + "<br>";
+                        output += "Title: " + song["Title"] + "<br>";
+                        genre = song["Genre"];
+                        output += "Genre: ";
+                        for (let j = 0; j < genre.length; j++) {
+                            output += genre[j] + " ";
+                        }
+                        output += "<br>Year: " + song["Year"] + "<br>***<br>";
+                    }
+                    document.getElementById("friendly_display").innerHTML = output;
+				}
+				else if (request.readyState == 4 && request.status != 200) {
+					document.getElementById("messages").innerHTML = "Whoops, something went terribly wrong!";
+				}
+
+				else if (request.readyState == 3) {
+					console.log("6:  ready state 3- request received,data being sent");
+					document.getElementById("messages").innerHTML = "Come back soon!";
+				}
+			}
+			request.send();
+			console.log("4 request sent");
+		}
+	</script>
+</head>
+<body onload="loadMessages()">
+    <h1>JSON Songlist</h1>
+	<h2>Serialized Songlist</h2>
+	<div id="messages">Loading...</div>
+    <h2>Friendly Display</h2>
+    <div id="friendly_display"></div>
+</body>
+</html>
