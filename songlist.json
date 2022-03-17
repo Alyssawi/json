@@ -1,0 +1,62 @@
+[
+    {
+        "Artist":"Caravan Palace",
+        "Title":"Wonderland",
+        "Genre":["Electro Swing", "Jazz Pop"],
+        "Year":2015
+    },
+    {
+        "Artist":"Caravan Palace",
+        "Title":"Miracle",
+        "Genre":["Electro Swing", "Jazz Pop"],
+        "Year":2019
+    },
+    {
+        "Artist":"Caravan Palace",
+        "Title":"Lone Digger",
+        "Genre":["Electro Swing", "Jazz Pop"],
+        "Year":2015
+    },
+    {
+        "Artist":"Caravan Palace",
+        "Title":"Suzy",
+        "Genre":["Electro Swing", "Jazz Pop"],
+        "Year":2019
+    },
+    {
+        "Artist":"The Beatles",
+        "Title":"Come Together",
+        "Genre":["Rock"],
+        "Year":1969
+    },
+    {
+        "Artist":"The Beatles",
+        "Title":"Lucy in the Sky with Diamonds",
+        "Genre":["Rock"],
+        "Year":1967
+    },
+    {
+        "Artist":"The Beatles",
+        "Title":"Maxwell's Silver Hammer",
+        "Genre":["Rock"],
+        "Year":1969
+    },
+    {
+        "Artist":"Dua Lipa",
+        "Title":"Don't Start Now",
+        "Genre":["Pop", "Dance"],
+        "Year":2020
+    },
+    {
+        "Artist":"Dua Lipa",
+        "Title":"Levitating",
+        "Genre":["Pop", "Dance"],
+        "Year":2020
+    },
+    {
+        "Artist":"Boston",
+        "Title":"Amanda",
+        "Genre":["Rock", "Power Ballad"],
+        "Year":1986
+    }
+]
